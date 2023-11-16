@@ -1,0 +1,353 @@
+    /* Global styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    header {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #c70212;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease; /* Add a transition for color change */
+    }
+    
+    nav ul li a:hover {
+      color: #c70212; /* Change color on hover */
+    }
+
+    /* Card section */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 300px;
+      margin: 20px;
+      background: #000000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgb(0, 0, 0);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h2 {
+      margin-bottom: 10px;
+      font-style: italic;
+      color: #c70212;
+    }
+
+    .card-content p {
+      margin-bottom: 20px;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+    .card a {
+      text-decoration: none;
+    }
+
+    .container {
+      margin-bottom: 80px; /* Adjust as needed */
+    }
+
+    /* Futuristic Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      padding: 3px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-heading {
+      font-size: 24px;
+      /* Adjust the font size as needed */
+      color: #c70212;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      /* Adjust the font size as needed */
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.3s ease-in-out;
+    }
+
+    footer a:hover {
+      border-bottom-color: #c70212;
+    }
+
+    .footer-left {
+      margin-bottom: 10px;
+    }
+
+    /* Responsive adjustments */
+    @media only screen and (min-width: 768px) {
+      .footer-container {
+        flex-direction: row;
+        padding: 20px 40px;
+        /* Adjust the padding as needed */
+      }
+
+      .footer-heading {
+        font-size: 28px;
+        /* Adjust the font size as needed */
+      }
+
+      .footer-left {
+        margin: 0;
+        margin-right: auto;
+      }
+
+      .footer-right {
+        margin-left: auto;
+      }
+    }
+
+    /* Styles for larger screens */
+    .left-side,
+    .right-side {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .left-side {
+      width: 100%;
+      text-align: left;
+    }
+
+    .right-side {
+      width: 100%;
+      text-align: right;
+    }
+
+    /* Styles for smaller screens */
+    @media (max-width: 768px) {
+
+      .left-side,
+      .right-side {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* Media Queries */
+    @media only screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      .card {
+        width: calc(100% - 40px);
+        margin: 10px;
+      }
+    }
+
+    .card-video {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio (change this value if needed) */
+    }
+
+    .card-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    /* Background Video */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+
+
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #splash-screen {
+      background: #000;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      /* Added */
+      justify-content: center;
+      align-items: center;
+      animation: fadeOut 1s ease-in-out 10s forwards;
+    }
+
+    .logo {
+      /* width: 100px;
+        height: 100px;
+        background: url('shayan2.jpg') no-repeat center center;
+        background-size: contain;
+        order: -1; Added */
+      margin-top: 20px;
+      /* Added */
+    }
+
+    h1 {
+      margin-top: 20px;
+      /* Added */
+      color: #c70212;
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* Video Card Styles */
+    .video-card {
+      width: 80%;
+      max-width: 400px;
+      margin: 65px auto;
+      background-color: #000000;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0px 0px 10px rgb(6, 6, 6);
+    }
+
+    .video-card video {
+      width: 100%;
+      height: 200px;
+      /* You can increase this value for more height */
+      display: block;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .card-content {
+      padding: 30px;
+    }
+
+    .card-heading {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #c70212;
+    }
+
+    .card-text {
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+
+/* Search bar styles */
+.search-container {
+  text-align: center;
+  margin: 30px auto;
+}
+
+#search-input {
+  padding: 10px;
+  width: 60%;
+  border: 1px solid #000000; /* Change border color to white */
+  background-color: #000; /* Set background color to black */
+  color: #c70212; /* Set text color to white */
+  border-radius: 10px;
+}
+
+#search-button {
+  padding: 10px 18px;
+  border: none;
+  background-color: #c70212;
+  color: #000; /* Set text color to black */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #b60211;
+}
+
+
